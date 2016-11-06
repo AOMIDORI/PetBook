@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'static_pages/about'
+
   get 'sessions/new'
   #get 'sessions/create'
   get 'users/new'
