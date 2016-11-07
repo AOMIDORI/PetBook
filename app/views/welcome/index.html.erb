@@ -17,12 +17,14 @@
         Connect yourself to this wonderful pet planet - 
         <a href="http://www.railstutorial.org/">PetBook</a>.
       </h2>
+       <div>
+       <%= link_to image_tag("logo_white.png", size: "340x180", alt: "Petbook white logo"), :class => "center_img" %></div>
 
       <%= link_to "Sign up now!", signup_path, class: "btn btn-lg btn-primary" %>
     </div>
 
     <div class="container">
-      <%= link_to image_tag("logo_white.png", size: "340x180", alt: "Petbook white logo"),   '#', :class => "center_img" %>
+     
       <%= yield %>
       <%= render 'layouts/footer' %>
 
