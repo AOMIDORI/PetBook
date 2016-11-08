@@ -1,19 +1,27 @@
 <% provide(:title, @user.name) %>
 <%= render 'layouts/header' %>
 
-<p id="notice"><%= notice %></p>
-
-<p>
-  <%= gravatar_for @user %>
-  <strong>Name:</strong>
-  <%= @user.name %>
-</p>
-
-<p>
-  <strong>Email:</strong>
-  <%= @user.email %>
-</p>
-
 <%= link_to 'Edit', edit_user_path(@user) %> |
-<%= link_to 'User list', users_path %>
+<%= link_to 'User list', users_path %> |
 <%= link_to 'Home', root_path %>
+
+<div class="row">
+  <aside class="col-md-4">
+    <section class="user_info">
+      <h2>
+        <%= gravatar_for @user %> 
+        <%= @user.name %>
+      </h2>
+        <%= @user.email %>
+    </section>
+  </aside>
+  <div class="col-md-8">
+    <% if @user.posts.any? %>
+      <h3>Posts (<%= @user.posts.count %>)</h3>
+      <ol class="posts">
+        <%= render @posts %>
+      </ol>
+      <%= will_paginate @posts %>
+    <% end %>
+  </div>
+</div>

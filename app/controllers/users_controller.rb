@@ -13,6 +13,7 @@ class UsersController < ApplicationController
   # GET /users/1.json
   def show
     @user = User.find(params[:id])
+    @posts = @user.posts.paginate(page: params[:page])
     #debugger
   end
 
@@ -83,12 +84,12 @@ class UsersController < ApplicationController
      # Confirms the correct user.
     def correct_user
       @user = User.find(params[:id])
-      redirect_to(root_url) unless current_user?(@user)
+      redirect_to(home_url) unless current_user?(@user)
     end
 
     # Confirms an admin user.
     def admin_user
-      redirect_to(root_url) unless current_user.admin?
+      redirect_to(home_url) unless current_user.admin?
     end
 
 end
