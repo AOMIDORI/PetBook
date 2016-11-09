@@ -1,6 +1,9 @@
 class WelcomeController < ApplicationController
   protect_from_forgery with: :exception
   def index
+    #if logged_in?
+    #  redirect_to home_url
+    #end
   end
   include SessionsHelper
 
