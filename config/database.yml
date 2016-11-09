@@ -32,5 +32,5 @@ test:
   password: petbook1234
 
 production:
-  <<: *default
-  database: petbook_development
+  adapter: postgresql
+  prepared_statements: false

@@ -20,6 +20,7 @@ Rails.application.routes.draw do
     end
   end
   resources :posts, only: [:create, :destroy]
+  resources :relationships, only: [:create, :destroy]
   #resources :account_activations, only: [:edit]
   #resources :sessions
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
