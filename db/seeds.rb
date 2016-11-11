@@ -29,6 +29,11 @@ users = User.order(:created_at).take(6)
   users.each { |user| user.posts.create!(content: content) }
 end
 
+3.times do
+  petname = Faker::Name.name
+  users.each { |user| user.pets.create!(name: petname)}
+end
+
 # Following relationships
 users = User.all
 user  = users.first

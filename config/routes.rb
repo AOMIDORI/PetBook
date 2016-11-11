@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :pets
   #get 'sessions/create'
   get 'welcome/index'
 
@@ -8,7 +9,10 @@ Rails.application.routes.draw do
   get '/home', to: 'static_pages#home'
   get '/about', to: 'static_pages#about'
   get '/contact', to:'static_pages#contact'
+
   get '/signup', to:'users#new'
+  get '/addpet', to: 'pets#new'
+  
   get '/login', to:'sessions#new'
   post '/login', to:'sessions#create'
   delete '/logout', to:'sessions#destroy'
@@ -19,6 +23,7 @@ Rails.application.routes.draw do
       get :following, :followers
     end
   end
+  resources :pets 
   resources :posts, only: [:create, :destroy]
   resources :relationships, only: [:create, :destroy]
   #resources :account_activations, only: [:edit]
