@@ -2,6 +2,8 @@
 <%= render 'layouts/header' %>
 <h1>Update your profile</h1>
 
+<p> Below you can change your user name, email address, password or profile picture</p>
+
 <div class="row">
 	<div class="col-md-6 col-md-offset-3">
 		<%= form_for(@user) do |f| %>
@@ -13,11 +15,11 @@
 		<%= f.label :email %>
 		<%= f.email_field :email, class: 'form-control' %>
 
-		<%= f.label :password %>
-		<%= f.password_field :password, class: 'form-control' %>
+		<%= f.label :New_password %>
+		<%= f.password_field :New_password, class: 'form-control' %>
 
-		<%= f.label :password_confirmation %>
-		<%= f.password_field :password_confirmation, class: 'form-control' %>
+		<%= f.label :Password_confirmation %>
+		<%= f.password_field :Password_confirmation, class: 'form-control' %>
 
 		<%= f.submit "Submit", class: "btn btn-primary" %>
 		<% end %>
@@ -25,7 +27,7 @@
 
 		<div class="gravatar_edit">
 			<%= gravatar_for @user %>
-			<a href="http://gravatar.com/emails" target="_blank">change</a>
+			<a href="http://gravatar.com/emails" target="_blank">Change profile picture</a>
 		</div>
 	</div>
 </div>
