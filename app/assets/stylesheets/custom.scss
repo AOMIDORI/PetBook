@@ -1,6 +1,6 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
-
+ 
 /* universal */
 
 body {
@@ -68,6 +68,10 @@ p {
 #logo:hover {
   color: #fff;
   text-decoration: none;
+}
+
+#navtext{
+  font-size: 1.3em
 }
 
 /* body */
