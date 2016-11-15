@@ -8,8 +8,7 @@ default: &default
   adapter: postgresql
   pool: 5
   encoding: unicode
-  username: petbook
-  password: petbook1234
+
 
 development:
   adapter: postgresql
@@ -32,5 +31,6 @@ test:
   password: petbook1234
 
 production:
+  <<: *default
   adapter: postgresql
   prepared_statements: false
