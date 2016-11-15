@@ -1,0 +1,16 @@
+/* button settings */
+.btn-primary {
+  font-family: 'Helvetica Neue';
+  font-size: large;
+  background-color:black;
+  border-color: black;
+  padding: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin: 10px;
+  color: white;
+}
+.btn-primary:hover {
+  background-color: white;
+  color: darkgrey;
+}

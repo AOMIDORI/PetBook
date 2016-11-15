@@ -1,4 +1,5 @@
 class PetsController < ApplicationController
+<<<<<<< HEAD
   before_action :set_pet, only: [:show, :edit, :update, :destroy]
 
   # GET /pets
@@ -81,4 +82,13 @@ class PetsController < ApplicationController
     def pet_params
       params.require(:pet).permit(:name, :user_id, :avatar)
     end
+=======
+  protect_from_forgery with: :exception
+  def petprofile
+    #if logged_in?
+    #  redirect_to home_url
+    #end
+  end
+  #include SessionsHelper
+>>>>>>> origin/Zuzze
 end
