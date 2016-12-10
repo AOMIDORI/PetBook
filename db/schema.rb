@@ -10,11 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
-ActiveRecord::Schema.define(version: 20161112165950) do
-=======
-ActiveRecord::Schema.define(version: 20161109162518) do
->>>>>>> origin/Zuzze
+ActiveRecord::Schema.define(version: 20161123185853) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -24,11 +20,13 @@ ActiveRecord::Schema.define(version: 20161109162518) do
     t.integer  "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-<<<<<<< HEAD
     t.string   "avatar"
+    t.date     "birthday"
+    t.string   "gender"
+    t.string   "type"
+    t.string   "breed"
+    t.text     "bio"
     t.index ["user_id", "created_at"], name: "index_pets_on_user_id_and_created_at", using: :btree
-=======
->>>>>>> origin/Zuzze
     t.index ["user_id"], name: "index_pets_on_user_id", using: :btree
   end
 

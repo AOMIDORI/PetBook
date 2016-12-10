@@ -1,3 +1,5 @@
+
+
 <%= form_for(pet, html: {multipart: true}) do |f| %>
   <% if pet.errors.any? %>
     <div id="error_explanation">
@@ -15,7 +17,38 @@
     <%= f.label :name %>
     <%= f.text_field :name, class: 'form-control' %>
   </div>
+  <div class="field">
+    <%= f.label :name %>
+    <%= f.text_field :name, class: 'form-control' %>
+  </div>
+  <div class="field">
+    <%= f.label :name %>
+    <%= f.text_field :name, class: 'form-control' %>
+  </div>
+  <div class="field">
+    <%= f.label :name %>
+    <%= f.text_field :name, class: 'form-control' %>
+  </div>
+  <div class="field">
+    <%= f.label :birthday %>
+    <%= f.text_field :birthday, class: 'datepicker', value: Date.today %>
+    <script>
+      $.fn.datepicker.defaults.format = "yyyy-mm-dd";
+      $('.datepicker').datepicker({
+        format: 'yyyy-mm-dd'
+      });
+    </script>
 
+  </div>
+
+  <div class="input-group date" data-provide="datepicker">
+    <input type="text" class="form-control">
+    <div class="input-group-addon">
+        <span class="glyphicon glyphicon-th"></span>
+    </div>
+</div>
+
+  
   <div class="avatar">
     <%= f.label :avatar %><br>
     <%= f.file_field :avatar %>
