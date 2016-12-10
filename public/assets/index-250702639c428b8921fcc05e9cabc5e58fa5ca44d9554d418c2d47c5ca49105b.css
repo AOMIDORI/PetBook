@@ -1,0 +1,20 @@
+/* button settings */
+/* line 4, /Users/Alex/Projects/PetBook/app/assets/stylesheets/index.scss */
+.btn-primary {
+  font-family: 'Helvetica Neue';
+  font-size: 16px;
+  background-color: #B76464;
+  border-color: #B76464;
+  padding: 6px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin: 8px;
+  color: white;
+  border-radius: 14px;
+}
+
+/* line 16, /Users/Alex/Projects/PetBook/app/assets/stylesheets/index.scss */
+.btn-primary:hover {
+  background-color: white;
+  color: darkgrey;
+}

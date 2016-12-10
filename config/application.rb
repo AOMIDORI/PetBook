@@ -11,7 +11,7 @@ Bundler.require(*Rails.groups)
 module PetBookApp
   class Application < Rails::Application
   	config.assets.initialize_on_precompile = true
-  	config.assets.precompile = config.assets.precompile + %w(*.png *.jpg *.jpeg *.gif *.woff *.ttf *.svg *.eot)
+  	config.assets.precompile = config.assets.precompile + %w( *.png *.jpg *.jpeg *.gif *.woff *.ttf *.svg *.eot)
 
   	# Include the authenticity token in remote forms.
     config.action_view.embed_authenticity_token_in_remote_forms = true

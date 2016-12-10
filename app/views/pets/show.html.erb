@@ -1,47 +1,43 @@
+
 <% provide(:title, @pet.name) %>
 <%= render 'layouts/header' %>
 
-<p>
-  <strong>Avatar:</strong>
+<div class="text-center" style="margin-bottom: 10px">
   <% if @pet.avatar? %>
-    <%= link_to image_tag(@pet.avatar.url, size: "100"), @pet %>
+    <%= link_to image_tag(@pet.avatar.url, size: "120", class: "img-circle"), @pet %>
+    <h4><strong><%= @pet.name %></strong></h4>
   <% end %>
-</p>
+</div>
 
-<p>
-  <strong>Name:</strong>
+<div class="center profilecard">
+
+  <strong>Name: </strong>
   <%= @pet.name %>
-</p>
+  <br>
 
-<p>
-  <strong>Owner:</strong>
+  <strong>Owner: </strong>
   <%= @pet.user.name %>
-</p>
+  <br>
 
-<p>
-  <strong>Birthday:</strong>
-  <%= @pet.name %>
-</p>
+  <strong>Birthday: </strong>
+  <%= @pet.birthday %>
+  <br>
 
-<p>
-  <strong>Gender:</strong>
-  <%= @pet.name %>
-</p>
+  <strong>Gender: </strong>
+  <%= @pet.gender %>
+  <br>
 
-<p>
-  <strong>Type:</strong>
-  <%= @pet.name %>
-</p>
+  <strong>Animal Type: </strong>
+  <%= @pet.animal_type %>
 
-<p>
-  <strong>Breed:</strong>
-  <%= @pet.name %>
-</p>
+  <strong>Breed: </strong>
+  <%= @pet.breed %>
+  <br>
 
-<p>
-  <strong>Bio:</strong>
-  <%= @pet.name %>
-</p>
+  <strong>Bio: </strong>
+  <%= @pet.bio %>
+
+</div>
 
 <%= link_to 'Edit', edit_pet_path(@pet) %>
 

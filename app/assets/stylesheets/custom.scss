@@ -1,16 +1,6 @@
 @import "bootstrap-sprockets";
-@import "http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css";
 @import "bootstrap";
  
- /* Import the fonts */
-@font-face {
-  font-family: 'Glyphicons Halflings';
-  src: font-url('fonts/glyphicons-halflings-regular.eot');
-  src: font-url('fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'),
-       font-url('fonts/glyphicons-halflings-regular.woff') format('woff'),
-       font-url('fonts/glyphicons-halflings-regular.ttf') format('truetype'),
-       font-url('fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
-}
 
 /* universal */
 
@@ -326,3 +316,19 @@ span.picture {
 
 
 /*  -----Search bar ----------------------------------*/
+
+
+/*     profile card -----------------------------------*/
+.profilecard{
+  padding-top: 15px;
+  padding-bottom: 15px;
+  background: #ffffff;
+  font-size: 14px;
+  font-family: sans-serif;
+  color: grey;
+  width: 400px;
+  margin:0 auto;
+  margin-top:10px;
+  border-radius: 14px;
+
+}

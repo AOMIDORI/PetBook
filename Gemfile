@@ -3,8 +3,9 @@ source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0.0', '>= 5.0.0.1'
-gem 'bootstrap-sass', '~> 3.3.5.1'
-gem 'sass'
+gem 'bootstrap-sass', '~> 3.3.6'
+gem 'autoprefixer-rails'
+gem 'sprockets-rails', '~> 2.3.2'
 gem 'bootstrap-datepicker-rails'
 gem 'bcrypt'
 gem 'faker'
@@ -14,6 +15,7 @@ gem 'mini_magick'
 gem 'fog'
 gem 'will_paginate'
 gem 'bootstrap-will_paginate'
+
 # Use sqlite3 as the database for Active Record
 #gem 'sqlite3'
 # Use Puma as the app server
@@ -29,6 +31,7 @@ gem 'coffee-rails', '~> 4.2'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
+gem 'jquery-ui-rails'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
 gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
