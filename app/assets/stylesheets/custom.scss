@@ -1,11 +1,21 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
- 
+
 /* universal */
 
 body {
-  padding-top: 60px;
-  background-color: #E8D6D3 !important;
+  margin: 70px !important;
+  padding: 50px;
+  padding-bottom: 20px;
+  background-color: #E8D6D3 !important; /*whole page background*/
+}
+
+html {
+  background: url(https://blog.vendordb.com/wp-content/uploads/2014/08/fur.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
 section {
@@ -52,7 +62,60 @@ p {
 }
 
 
-/* header */
+/*--------- header ------------*/
+/* search */
+
+#searchbutton {
+  width: 35px;
+  height: 28px;
+  background-image: url('https://maxcdn.icons8.com/windows8/PNG/512/Very_Basic/search-512.png');
+  background-size: 20px 20px;
+  background-position: 5px;
+  background-repeat: no-repeat;
+  padding: 5px;
+  margin: 5px;
+  margin-top: 20px;
+  background-color: #E8D6D3;
+}
+
+#search-form {
+  float:left;
+  width: 40%;
+}
+
+#search-bar {
+  margin: 5px;
+  padding: 5px;
+    height: 30px;
+    width: 80%;
+    font-size: 1.3em;
+    text-align: left;
+    color: grey;
+}
+
+#search-bar {
+  margin: 5px;
+  padding: 5px;
+    height: 30px;
+    width: 80%;
+    font-size: 1.3em;
+    text-align: left;
+    color: grey;
+}
+
+#search-bar:focus {
+color: black;
+}
+
+#headerleftwrap {
+  display: inline;
+  list-style-type: none;
+}
+
+#headerrightwrap {
+display: inline;
+list-style-type: none;
+}
 
 #logo {
   float: left;
@@ -71,7 +134,13 @@ p {
 }
 
 #navtext{
-  font-size: 1.3em
+  font-size: 1.4em;
+  color: white !important;
+  padding-top: 10px;
+}
+
+#navtext:hover {
+  color: #E8D6D3 !important;
 }
 
 /* body */
@@ -85,9 +154,8 @@ p {
 
 
 /* footer */
-
-
 footer {
+  width: 80%;
   margin-top: 45px;
   padding-top: 5px;
   border-top: 1px solid #eaeaea;
@@ -99,7 +167,9 @@ footer a {
 }
 
 footer a:hover {
-  color: #222;
+  color: white;
+  text-decoration: none;
+  padding: 15%;
 }
 
 footer small {
@@ -165,7 +235,6 @@ $gray-medium-light: #eaeaea;
     border-bottom: 1px solid $gray-lighter;
   }
 }
-
 
 /* ----  posts ----------------------------- */
 

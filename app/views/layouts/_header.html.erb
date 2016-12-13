@@ -1,14 +1,30 @@
 <header class="navbar navbar-fixed-top navbar-inverse">
   <div class="container">
-    <%= link_to image_tag("logo_dark_high.png", size: "100x60", alt: "Rails logo"), home_url, id:"logo" %>
-
     <nav>
+      <div id="navelements">
+    <div id="headerleftwrap">
+    <%= link_to image_tag("logo_dark_high.png", size: "100x60", alt: "Rails logo"), home_url, id:"logo" %>
+<!--
+    <form>
+    <input id="searchbar" type="text" name="search" placeholder="Search...">
+  </form>
+  <button id="searchbutton" type="image">Search</button>
+      !-->
 
+    	<!-- HTML for SEARCH BAR -->
+      <div id="searchwrap">
+        <form id="search-form" name="search" action="/users" method="get">
+          <input id="search-bar" name="searchbar" type="text" placeholder="Search...">
+          <input id="searchbutton" name="Search" type="submit" value="">
+        </form>
+      </div>
+  </div>
+
+<div id="headerrightwrap">
       <ul class="nav navbar-nav navbar-right">
-
         <li id="navtext"><%= link_to "Home", home_url %></li>
         <li id="navtext"><%= link_to "Explore", explore_url %></li>
-        <li id="navtext"><%= link_to "News", news_url %></li>
+        <li id="navtext"><%= link_to "Notifications", news_url %></li>
 
         <% if logged_in? %>
         	<li class = "dropdown", id="navtext">
@@ -28,8 +44,9 @@
         <% else %>
         	<li id="navtext"><%= link_to "Log in", login_path %></li>
         <% end %>
-
       </ul>
-    </nav>
+      </div>
+    </div>
+      </nav>
   </div>
 </header>
