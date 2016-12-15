@@ -1,0 +1,37 @@
+
+/*       Comment list -----------------------------------*/
+
+/*   Related files: views/posts/_post.html.erb */
+
+
+.commentlist{
+  margin-left: 50px;
+  padding-left: 4px;
+}
+.commentuser{
+  font-weight:bold;
+  padding-right:6px;
+}
+.commentcontent{
+  color:grey;
+}
+
+.addcomment{
+
+}
+.comment-form{
+	display:inline-block;
+	width: 60%;
+    padding: 6px 20px;
+    margin-left:50px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+.comment-button{
+	display:inline-block;
+	margin-right: 30px;
+	padding-bottom: 10px;
+	
+}

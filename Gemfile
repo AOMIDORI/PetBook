@@ -15,6 +15,7 @@ gem 'mini_magick'
 gem 'fog'
 gem 'will_paginate'
 gem 'bootstrap-will_paginate'
+gem 'commontator'
 
 # Use sqlite3 as the database for Active Record
 #gem 'sqlite3'

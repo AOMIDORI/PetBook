@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :comments
   resources :pets
   #get 'sessions/create'
   get 'welcome/index'
@@ -28,8 +29,12 @@ Rails.application.routes.draw do
     end
   end
   resources :pets
-  resources :posts, only: [:create, :destroy]
+  resources :posts do
+    resources :comments
+  end
   resources :relationships, only: [:create, :destroy]
+
+  mount Commontator::Engine => '/Commontator'
   #resources :account_activations, only: [:edit]
   #resources :sessions
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html

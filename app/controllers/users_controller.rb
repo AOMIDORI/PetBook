@@ -15,6 +15,7 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
     @posts = @user.posts.paginate(page: params[:page])
     @pets = @user.pets.paginate(page: params[:page])
+    
     #debugger
   end
 

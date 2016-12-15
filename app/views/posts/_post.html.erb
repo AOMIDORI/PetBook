@@ -14,4 +14,40 @@
     <% end %>
 
   </span>
+
+  <div class="commentlist">
+  <h4>Comments</h4>
+    <% if post.comments %>
+      <% post.comments.each do |comment| %>
+      <span class="commentuser"><%= link_to comment.user.name, comment.user %></span>
+      <span class="commentcontent">
+      <%= comment.content %><br>
+    </span>
+  
+    <% end %>
+    <% end %>
+
+  </div>
+
+  <span class="addcomment row">
+    <%= form_for [post, post.comments.new] do |f| %>
+    <%= render 'shared/error_messages', object: f.object %>
+
+    <div class="field">
+    
+      <%= f.text_area :content, placeholder: "Add a comment...", class: "comment-form" %>
+  
+      <div class="comment-button">
+      <%= f.submit "comment", :type => :image, :src => image_path("send.png"), :height => "30px", :align => "right" %>
+      </div>
+  
+    </div>
+
+
+    
+
+    <% end %>
+
+  </span>
+
 </li>

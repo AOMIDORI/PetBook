@@ -69,6 +69,9 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.10.0)
+    commontator (4.11.1)
+      jquery-rails
+      rails (>= 3.1)
     concurrent-ruby (1.0.2)
     debug_inspector (0.0.2)
     erubis (2.7.0)
@@ -336,6 +339,7 @@ DEPENDENCIES
   byebug
   carrierwave
   coffee-rails (~> 4.2)
+  commontator
   faker
   fog
   jbuilder (~> 2.5)
