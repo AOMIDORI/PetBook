@@ -1,14 +1,17 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
-@import "commontator/application";
 
 
 /* universal */
 
 body {
-  padding-top: 60px;
+  margin: 70px !important;
+  padding: 50px;
+  padding-bottom: 20px;
   background-color: #E8D6D3 !important;
 }
+
+
 
 section {
   overflow: auto;
@@ -55,6 +58,62 @@ p {
 
 
 /* header */
+/* search */
+
+#searchbutton {
+display:inline-block;
+  width: 30px;
+  height: 30px;
+  background-image: url('search.png');
+  background-size: 25px 25px;
+  background-position: 2px;
+  background-repeat: no-repeat;
+  
+  background-color: white;
+  border: 0;
+}
+
+.search-form {
+display:inline-block;
+  float:left;
+  height:34px;
+  width: 45%;
+  margin-top: 22px;
+  border: 0;  
+  background: white;
+
+}
+
+#search-bar {
+display:inline-block;
+    height: 20px;
+    width: 85%;
+    font-size: 1.2em;
+    text-align: left;
+    color: grey;
+    padding-bottom: 0;
+    padding-top: 0;
+    padding-left: 4px;
+  border: 0;
+
+}
+
+
+
+#search-bar:focus {
+color: black;
+}
+
+#headerleftwrap {
+  display: inline;
+  list-style-type: none;
+}
+
+#headerrightwrap {
+display: inline;
+list-style-type: none;
+}
+
 
 #logo {
   float: left;
@@ -73,7 +132,12 @@ p {
 }
 
 #navtext{
-  font-size: 1.3em
+  font-size: 1.2em;
+  color: white !important;
+  padding-top: 10px;
+}
+#navtext:hover {
+  color: #E8D6D3 !important;
 }
 
 /* body */
@@ -90,6 +154,7 @@ p {
 
 
 footer {
+  width: 80%;
   margin-top: 45px;
   padding-top: 5px;
   border-top: 1px solid #eaeaea;
@@ -101,7 +166,9 @@ footer a {
 }
 
 footer a:hover {
-  color: #222;
+  color: white;
+  text-decoration: none;
+  padding: 15%;
 }
 
 footer small {

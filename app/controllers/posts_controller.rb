@@ -1,5 +1,5 @@
 class PostsController < ApplicationController
-  before_action :logged_in_user, only: [:create, :destroy]
+  before_action :logged_in_user, only: [:create, :destroy, :like]
   before_action :correct_user, only: :destroy
 
   def index
@@ -25,6 +25,15 @@ class PostsController < ApplicationController
   	Post.find(params[:id]).destroy
   	flash[:success] = "Post deleted"
   	redirect_to request.referrer || home_url
+  end
+
+  def like
+    if @post.liked_by current_user
+      respond_to do |format|
+        format.html {redirect_to :back}
+        format.js
+      end
+    end
   end
 
 

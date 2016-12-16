@@ -30,6 +30,10 @@ class User < ApplicationRecord
 
   #validates :password_confirmation, presence: true
 
+  def has_like? post
+    likes.find_by_post_id post.id
+  end
+
   # Returns the hash digest of the given string.
   def User.digest(string)
     cost = ActiveModel::SecurePassword.min_cost ? BCrypt::Engine::MIN_COST :

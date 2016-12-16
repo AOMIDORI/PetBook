@@ -29,12 +29,17 @@ Rails.application.routes.draw do
     end
   end
   resources :pets
+
   resources :posts do
     resources :comments
+    member do
+      get 'like'
+    end
+
   end
   resources :relationships, only: [:create, :destroy]
 
-  mount Commontator::Engine => '/Commontator'
+  
   #resources :account_activations, only: [:edit]
   #resources :sessions
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
