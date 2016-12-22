@@ -1,46 +1,47 @@
 <header class="navbar navbar-fixed-top navbar-inverse">
   <div class="container">
     <nav>
-      <div id="navelements">
-    <div id="headerleftwrap">
-    <%= link_to image_tag("logo_dark_high.png", size: "100x60", alt: "PETBOOK"), home_url, id:"logo" %>
+      <div class="row">
+        <div id="headerleftwrap", class="col-xs-10 col-md-6">
+          <%= link_to image_tag("logo_dark_high.png", size: "100x60", alt: "PETBOOK"), home_url, id:"logo"%>
 
-        <!-- HTML for SEARCH BAR -->
-      <div id="searchwrap">
-        <form class="search-form" name="search" action="/users" method="get">
-          <input id="search-bar" name="searchbar" type="text" placeholder="Search...">
-          <input id="searchbutton" name="Search" type="submit" value="">
-        </form>
-      </div>
-  </div>
+          <!-- HTML for SEARCH BAR -->
+          <div class="searchwrap">
+            <form class="search-form" name="search" action="/users" method="get">
+              <input class="search-bar" name="searchbar" type="text" placeholder="Search...">
+              <input class="searchbutton" name="Search" type="submit" value="">
+            </form>
+          </div>
 
-<div id="headerrightwrap">
-      <ul class="nav navbar-nav navbar-right">
-        <li id="navtext"><%= link_to "Home", home_url %></li>
-        <li id="navtext"><%= link_to "Explore", explore_url %></li>
-        <li id="navtext"><%= link_to "Notifications", news_url %></li>
+        </div>
 
-        <% if logged_in? %>
+        <div id="headerrightwrap" class="col-xs-2 col-md-6">
+          <ul class="nav navbar-nav navbar-right">
+            <li id="navtext"><%= link_to "Home", home_url %></li>
+            <li id="navtext"><%= link_to "Explore", explore_url %></li>
+            <li id="navtext"><%= link_to "News", news_url %></li>
+
+            <% if logged_in? %>
             <li class = "dropdown", id="navtext">
-                <a href="#" class = "dropdown-toggle" data-toggle="dropdown">
-                    Account <b class="caret", id="navtext"></b>
-                </a>
-                <ul class="dropdown-menu">
-                    <li><%= link_to "User Profile", current_user %></li>
-                    <li><%= link_to "Settings", edit_user_path(current_user) %></li>
-                    <li class="divider"></li>
-                    <li>
-                        <%= link_to "Log out", logout_path, method:"delete"%>
-                    </li>
-                </ul>
+              <a href="#" class = "dropdown-toggle" data-toggle="dropdown">
+                Account <b class="caret", id="navtext"></b>
+              </a>
+              <ul class="dropdown-menu">
+                <li><%= link_to "User Profile", current_user %></li>
+                <li><%= link_to "Settings", edit_user_path(current_user) %></li>
+                <li class="divider"></li>
+                <li>
+                  <%= link_to "Log out", logout_path, method:"delete"%>
+                </li>
+              </ul>
             </li>
 
-        <% else %>
+            <% else %>
             <li id="navtext"><%= link_to "Log in", login_path %></li>
-        <% end %>
-      </ul>
+            <% end %>
+          </ul>
+        </div>
       </div>
-    </div>
-      </nav>
+    </nav>
   </div>
 </header>

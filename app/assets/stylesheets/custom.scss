@@ -59,9 +59,10 @@ p {
 
 /* header */
 /* search */
-
-#searchbutton {
-display:inline-block;
+.searchwrap{
+  width: 100%;
+}
+.searchbutton {
   width: 30px;
   height: 30px;
   background-image: url('search.png');
@@ -74,48 +75,47 @@ display:inline-block;
 }
 
 .search-form {
-display:inline-block;
+  display: inline-block;
   float:left;
   height:34px;
-  width: 45%;
+  width: 60%;
   margin-top: 22px;
   border: 0;  
   background: white;
+  margin-left:40px;
 
 }
 
-#search-bar {
-display:inline-block;
+.search-bar {
     height: 20px;
-    width: 85%;
+    width: 80%;
     font-size: 1.2em;
     text-align: left;
     color: grey;
     padding-bottom: 0;
-    padding-top: 0;
+    padding-top: 0; 
     padding-left: 4px;
   border: 0;
 
 }
 
 
-
-#search-bar:focus {
+.search-bar:focus {
 color: black;
 }
 
 #headerleftwrap {
   display: inline;
-  list-style-type: none;
 }
 
 #headerrightwrap {
-display: inline;
-list-style-type: none;
+  align:right;
+  list-style-type: none;
 }
 
 
 #logo {
+  display: inline-block;
   float: left;
   margin-right: 10px;
   font-size: 1.7em;
