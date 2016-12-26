@@ -48,7 +48,7 @@ h1 {
 }
 
 h2 {
-  font-size: 1.2em;
+  font-size: 1.4em;
   letter-spacing: -1px;
   margin-bottom: 30px;
   text-align: center;
@@ -249,6 +249,11 @@ $gray-medium-light: #eaeaea;
     margin-top: 5em;
     padding-top: 0;
   }
+
+  .user-info > h1 {
+    text-align: left;
+  }
+
   .content {
     display: block;
     margin-left: 60px;
@@ -345,7 +350,7 @@ span.picture {
 
 .stats {
   overflow: auto;
-  margin-top: 0;
+  margin: 20px;
   padding: 0;
   a {
     float: left;
@@ -361,6 +366,15 @@ span.picture {
       color: blue;
     }
   }
+
+.stats:hover {
+  background-color: black !important;
+  color:white !important;
+  margin: 5px;
+}
+
+
+
   strong {
     display: block;
   }
