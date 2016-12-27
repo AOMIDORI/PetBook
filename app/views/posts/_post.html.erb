@@ -2,7 +2,7 @@
                                               'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <%= csrf_meta_tags %>
-    
+
 <li id="post-<%= post.id %>">
   <%= link_to gravatar_for(post.user, size: 50), post.user %>
   <span class="user"><%= link_to post.user.name, post.user %></span>
@@ -20,6 +20,11 @@
 
   </span>
 
+  <div class="row like">
+    <%= link_to 'Like', like_post_path(post.id), remote: true, id: "like_#{post.id}" %>
+  <!--class: "glyphicon glyphicon-heart-empty"!-->
+  </div>
+
   <div class="commentlist">
   <h4>Comments</h4>
     <% if post.comments %>
@@ -28,32 +33,30 @@
       <span class="commentcontent">
       <%= comment.content %><br>
     </span>
-  
+
     <% end %>
     <% end %>
 
   </div>
 
-  <div class="row like">
-    <%= link_to 'like', like_post_path(post.id), remote: true, id: "like_#{post.id}",class: "glyphicon glyphicon-heart-empty" %>
-  </div>
+
 
   <span class="addcomment row">
     <%= form_for [post, post.comments.new] do |f| %>
     <%= render 'shared/error_messages', object: f.object %>
 
     <div class="field">
-    
+
       <%= f.text_area :content, placeholder: "Add a comment...", class: "comment-form" %>
-  
+
       <div class="comment-button">
       <%= f.submit "comment", :type => :image, :src => image_path("send.png"), :height => "30px", :align => "right" %>
       </div>
-  
+
     </div>
 
 
-    
+
 
     <% end %>
 
