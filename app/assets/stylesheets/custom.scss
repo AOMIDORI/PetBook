@@ -67,20 +67,22 @@ p {
 
 
 /* header */
+
 /* search */
 .searchwrap{
   width: 100%;
 }
 .searchbutton {
-  width: 30px;
-  height: 30px;
+  width: 25px;
+  height: 25px;
   background-image: url('search.png');
   background-size: 25px 25px;
   background-position: 2px;
   background-repeat: no-repeat;
-
-  background-color: white;
+  display:inline;
+  background-color: transparent;
   border: 0;
+  padding-top: 10px;
 }
 
 .search-form {
@@ -90,7 +92,7 @@ p {
   width: 60%;
   margin-top: 22px;
   border: 0;
-  background: white;
+  background: transparent;
   margin-left:40px;
 
 }
@@ -101,10 +103,11 @@ p {
     font-size: 1.2em;
     text-align: left;
     color: grey;
-    padding-bottom: 0;
+    padding-bottom: 0px;
     padding-top: 0;
     padding-left: 5px;
-  border: 0;
+    border: 0;
+    border-radius: 20px;
 
 }
 
@@ -167,6 +170,7 @@ footer {
   width: 80%;
   margin-top: 45px;
   padding-top: 5px;
+  padding-bottom: 50px;
   border-top: 1px solid #eaeaea;
   color: #777;
 }
@@ -231,6 +235,44 @@ $gray-medium-light: #eaeaea;
   margin-left: 0;
 }
 
+
+/* about page */
+
+.about {
+  margin-bottom: 30px;
+  img {
+    float:left;
+    width: 40%;
+    margin: 3%;
+    border-radius: 50px;
+  }
+  p {
+    font-size: 1.7em;
+    margin-top: 5%;
+    line-height: 1.2;
+  }
+
+  h2 {
+    padding-top: 5%;
+  }
+}
+
+#about1 {
+  height: 30%;
+  clear:both;
+}
+
+#about2 {
+  height: 30%;
+  clear:both;
+}
+
+#about3 {
+  height: 30%;
+  clear:both;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+}
 
 
 /* Users index */
