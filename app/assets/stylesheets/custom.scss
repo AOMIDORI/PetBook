@@ -9,6 +9,7 @@ body {
   padding: 50px;
   padding-bottom: 20px;
   background-color: #E8D6D3 !important;
+  box-shadow: 2px 10px 43px 0px rgba(0,0,0,0.75);
 }
 
 html {
@@ -296,14 +297,18 @@ aside {
 
 }
 //all post boxes containing all post data
+#post-title {
+  text-align: center;
+}
+
 [id^=post] {
   background-color: white;
   padding: 0%;
+  box-shadow: 2px 10px 43px 0px rgba(0,0,0,0.75);
 
   .content > img{
-    width: 80%;
-    align-content: center;
-    padding: 3%;
+    width: 100%;
+    margin: auto;
   }
 
   .img-circle {
@@ -339,8 +344,9 @@ margin-top: 5%;
     background-position: left;
     background-color: transparent;
   }
-#comment_content {
-  width:70%;
+div.field {
+  width:100%;
+
 }
 
 span.content {
@@ -354,6 +360,12 @@ span.picture {
   input {
     border: 0;
   }
+}
+
+/* ----  follow others from profile page --------- */
+#follow_form.btn {
+  margin-left: 20px;
+
 }
 
 
@@ -391,10 +403,19 @@ span.picture {
 }
 
 aside {
+width: 100%;
   textarea {
     height: 100px;
     margin-bottom: 5px;
   }
+  textarea#post_content {
+    box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.0);
+  }
+
+input#post_picture {
+  box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.0);
+  background-color: transparent;
+}
 }
 
 span.picture {
