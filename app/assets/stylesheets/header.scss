@@ -1,4 +1,11 @@
 ul{
   font-family: 'Helvetica Neue';
   font-size: large;
+  .nav {
+    max-height: 69px;
+  }
+}
+
+#headerleftwrap, #headerrightwrap {
+  max-height: 69px;
 }
