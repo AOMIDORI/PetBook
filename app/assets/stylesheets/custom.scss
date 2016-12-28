@@ -15,7 +15,7 @@ body {
 }
 
 html {
-  background: url(https://blog.vendordb.com/wp-content/uploads/2014/08/fur.jpg) no-repeat center center fixed;
+  background: url("https://blog.vendordb.com/wp-content/uploads/2014/08/fur.jpg") no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -91,7 +91,7 @@ color:grey !important;
 }
 
 /* responsiviness */
-@media only screen and (max-width: 991px) {
+@media only screen and (max-width: 990px) {
     .navbar-right {
       display: none;
     }
@@ -100,8 +100,8 @@ color:grey !important;
     display: inline-block;
     margin-top: 10px;
     img {
-      width:80%;
-      height:80%;
+      width:60px;
+      height:50px;
       float:right;
     }
     color: grey;
@@ -119,7 +119,7 @@ color:grey !important;
   }
 }
 
-@media only screen and (min-width: 991px) {
+@media only screen and (min-width: 990px) {
     .navbar-right {
       display:block;
       font-size: 0.8em;
@@ -466,20 +466,23 @@ aside {
 #post_content {
   width: 100%;
   margin-top: 20px;
+  height: 70px;
+  padding: 5px;
+  font-size: 1.1em;
 }
 
-#posts {
-
-}
 //all post boxes containing all post data
 #post-title {
   text-align: center;
 }
 
+
 [id^=post] {
   background-color: white;
   padding: 0%;
   box-shadow: 2px 10px 43px 0px rgba(0,0,0,0.75);
+  max-width: 700px;
+  margin: auto;
 
   .content > img{
     width: 100%;
@@ -517,17 +520,33 @@ span.content {
 
 }
 
-#likebtn {
-margin-left: 10%;
+#post_picture {
+  background-color: transparent;
+  font-size: 1.3em;
+    box-shadow: 2px 10px 43px 0px rgba(0,0,0,0);
+    padding-top: 10px;
+    margin-left: 20%;
+}
+
+.post-btn {
+  float:right;
+  margin-right: 20%;
+}
+
+
+[id^=like] {
+margin-left: 60px;
 font-size: 1.2em;
-  width: 140px;;
+  width: 130px;;
   height: 40px;
   border-radius: 50px;
-  background-image: url('http://www.clker.com/cliparts/R/h/P/e/p/U/pink-heart-hi.png');
-  background-size: 25px 25px;
-  background-position: 10px;
-  background-repeat: no-repeat;
   background-color: white;
+  background-image: url("http://www.clker.com/cliparts/R/h/P/e/p/U/pink-heart-hi.png");
+  background-position: 10px;
+  background-size: 25px 25px;
+  display:inline;
+  padding-left: 5%;
+  background-repeat: no-repeat;
 }
 
 span.picture {
@@ -536,6 +555,14 @@ span.picture {
     border: 0;
   }
 }
+
+#form_post_div {
+  display: grid;
+  .post-btn {
+    margin: auto;
+  }
+}
+
 
 /* ----  follow others from profile page --------- */
 #follow_form.btn {

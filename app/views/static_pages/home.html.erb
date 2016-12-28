@@ -1,41 +1,18 @@
+<!--HOME PAGE-->
 <%= render 'layouts/header' %>
-<% if logged_in? %>
+
+<h1 align="center">Home</h1>
+
+<!--Post form-->
+  <section id="form_post" align="center">
+    <h3>Share your own story</h3>
+    <%= render 'shared/post_form' %>
+  </section>
+
+  <!--Newsfeed-->
   <div class="row">
-    <aside class="col-md-4">
-      <section class="user_info">
-        <%= render 'shared/user_info' %>
-      </section>
-
-      <section>
-        <%= render 'shared/stats' %>
-      </section>
-
-      <section class="post_form">
-        <%= render 'shared/post_form' %>
-      </section>
-    </aside>
-
-    <div class = "col-md-8" >
+      <h3 align="center">Stories from the users you follow</h3>
       <%= render 'shared/feed' %>
-    </div>
   </div>
-
-<% else %>
-  <div class="center jumbotron">
-    <h1>Welcome to PetBook</h1>
-
-      <h2>
-        Connect yourself to this wonderful pet planet -
-        <a href=/about>PetBook</a>.
-      </h2>
-       <div>
-       <%= link_to image_tag("logo_white.png", size: "340x180", alt: "Petbook white logo"), :class => "center_img" %></div>
-
-      <%= link_to "Sign up now!", signup_path, class: "btn btn-lg btn-primary" %>
-    </div>
-
-    <div class="container">
-
-<% end %>
 
 <%= render 'layouts/footer' %>

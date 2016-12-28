@@ -21,20 +21,21 @@
 
   </span>
 
-  <!--  <%= link_to 'Like', like_post_path(post.id), remote: true, id: "like_#{post.id}" %> -->
-  <!--class: "glyphicon glyphicon-heart-empty"!-->
+<!--LIKE-->
   <div class="row like">
-    <input align="center" onclick="like()" type="button" id="likebtn" value="Like"></input>
+<!--<%= link_to 'Like', id: "like_#{post.id}"%>-->
+  <!--class: "glyphicon glyphicon-heart-empty"!-->
+    <input value="Like" align="center" onclick="like(this)" type="button" id="like_<%= post.id %>"></input>
   </div>
 
 <script>
-  function like()
+  function like(elem)
   {
-    var elem = document.getElementById("likebtn");
       if (elem.value=="Like") elem.value = "Unlike";
       else elem.value = "Like";
   }
 </script>
+
 
   <div class="commentlist">
   <h4>Comments</h4>

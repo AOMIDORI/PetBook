@@ -2,18 +2,23 @@
 <%= form_for(@post) do |f| %>
   <%= render 'shared/error_messages', object: f.object %>
 
+
 <!--post text field-->
+
   <div class="field">
     <%= f.text_area :content, placeholder: "Share your pet story..." %>
   </div>
 
-<!--post photo field-->
-  <span class="picture">
+<div id="form_post_div">
+  <span class="picture" id="pic-post" align="left">
     <%= f.file_field :picture, accept: 'image/jpeg,image/gif,image/png' %>
   </span>
 
-<!--post button-->
-  <%= f.submit "Post", class: "btn btn-primary" %>
+  <span class="post-btn">
+    <%= f.submit "Post", class: "btn btn-primary" %>
+    </span>
+
+</div
 
 <% end %>
 
