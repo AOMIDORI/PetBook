@@ -1,6 +1,7 @@
 <!--HOME PAGE-->
 <%= render 'layouts/header' %>
 
+<div class="row">
 <h1 align="center">Home</h1>
 
 <!--Post form-->
@@ -9,8 +10,10 @@
     <%= render 'shared/post_form' %>
   </section>
 
+
+
   <!--Newsfeed-->
-  <div class="row">
+
       <h3 align="center">Stories from the users you follow</h3>
       <%= render 'shared/feed' %>
   </div>

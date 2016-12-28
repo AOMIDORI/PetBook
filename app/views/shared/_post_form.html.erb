@@ -9,14 +9,20 @@
     <%= f.text_area :content, placeholder: "Share your pet story..." %>
   </div>
 
-<div id="form_post_div">
-  <span class="picture" id="pic-post" align="left">
-    <%= f.file_field :picture, accept: 'image/jpeg,image/gif,image/png' %>
-  </span>
+<div>
+  <table id="form_post_div">
+  <tr>
+    <td><span class="picture" id="pic-post" align="left">
+      <%= f.file_field :picture, accept: 'image/jpeg,image/gif,image/png' %>
+    </span></td>
+    <td><span class="post-btn">
+      <%= f.submit "Post", class: "btn btn-primary" %>
+      </span></td>
+  </tr>
+</table>
 
-  <span class="post-btn">
-    <%= f.submit "Post", class: "btn btn-primary" %>
-    </span>
+
+
 
 </div
 
