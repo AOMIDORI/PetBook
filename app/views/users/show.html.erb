@@ -7,15 +7,16 @@
 <div class="row">
   <aside class="col-md-4">
       <h1><%= @user.name %></h1>
+      <div align="center", id="usermail"><%= @user.email %></div>
     <section id="userinfopanel", class="user_info">
       <div align="center", id="userpic"><%= gravatar_for @user %></div>
-      <div align="center", id="usermail"><%= @user.email %></div>
       <div align="center", id="userstats"><%= render 'shared/stats' %></div>
     </section>
 
-<!--edit user info!-->
+<!--edit user info (show only if own profile)-->
+<% if current_user?(@user) %>
     <div align="center", id="edit_user_btn", ><%= link_to 'Edit user profile', edit_user_path(@user), class: "btn" %></div>
-
+  <% end %>
 <!--PETS!-->
 <!--pet list info!-->
   <section>
@@ -26,9 +27,13 @@
     </ol>
   </div>
   </section>
-  <div align="center", id="addpet_btn"><%= link_to 'Add new pet', addpet_path, class:"btn" %></div>
+  <% if current_user?(@user) %>
 
-    </aside>
+  <!--add new pet (show only if own profile)-->
+  <div align="center", id="addpet_btn"><%= link_to 'Add new pet', addpet_path, class:"btn" %></div>
+  <% end %>
+
+</aside>
 
 <!--POSTS!-->
   <div class="col-md-8">
