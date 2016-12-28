@@ -1,4 +1,6 @@
+<!--WELCOME PAGE-->
 <%-# This is the welcome page view -%>
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -12,6 +14,8 @@
     <%= render 'layouts/shim' %>
   </head>
   <body>
+
+<!--header-->
     <%= render 'layouts/header' %>
 
     <div class="center jumbotron">
@@ -19,35 +23,37 @@
       <h1>Welcome to PetBook</h1>
 !-->
 
-      <div>
-
+<!--Picture-->
+      <div
        <div align="center" id="frontpic" class="category">
                <img src="http://www.bytaglasen.se/files/cache/c00daa365bb745d36f4435d95f7ef978_f56.jpg" />
       </div>
 
-      <div id="frontlogo">
-     <%= link_to image_tag("logo_white.png", size: "250x125", alt: "Petbook white logo"), :class => "center_img" %></div>
-    </div>
+<!--Logo-->
+
+
+<!--Title-->
+<div align="center">
+  <div id="frontlogo">
+ <%= link_to image_tag("logo_white.png", size: "250x125", alt: "Petbook white logo"), :class => "center_img" %></div>
+</div>
 
       <h4>
         Connect yourself to worldwide pet planet -  <a href=/about>PetBook</a>
       </h4>
 
+<!--Buttons-->
+
        <%= link_to "Log in", login_path, class: "btn btn-lg btn-primary" %>
-
        <%= link_to "Sign up", signup_path, class: "btn btn-lg btn-primary" %>
-
        <%= link_to "Explore as a Guest", explore_url, class: "btn btn-lg btn-primary" %>
 
-     </div>
-
+</div>
      <div class="container">
       <%= yield %>
+
+<!--footer-->
       <%= render 'layouts/footer' %>
-
     </div>
-
-
-
   </body>
 </html>

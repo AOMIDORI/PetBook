@@ -1,18 +1,23 @@
+<!--POST BOX AND PHOTO SENDER USED IN OTHER CONTEXTS-->
 <%= form_for(@post) do |f| %>
   <%= render 'shared/error_messages', object: f.object %>
 
+<!--post text field-->
   <div class="field">
     <%= f.text_area :content, placeholder: "Share your pet story..." %>
   </div>
 
+<!--post photo field-->
   <span class="picture">
     <%= f.file_field :picture, accept: 'image/jpeg,image/gif,image/png' %>
   </span>
 
+<!--post button-->
   <%= f.submit "Post", class: "btn btn-primary" %>
 
 <% end %>
 
+<!--only pictures under 5MB are allowed-->
 <script type="text/javascript">
   $('#post_picture').bind('change', function() {
     var size_in_megabytes = this.files[0].size/1024/1024;

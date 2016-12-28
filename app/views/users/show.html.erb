@@ -17,8 +17,10 @@
 <% if current_user?(@user) %>
     <div align="center", id="edit_user_btn", ><%= link_to 'Edit user profile', edit_user_path(@user), class: "btn" %></div>
   <% end %>
+
 <!--PETS!-->
 <!--pet list info!-->
+<!--@TODO-if no pet photo, no link -> fix this -->
   <section>
     <div id="pet_list">
     <h2> Pets </h2>

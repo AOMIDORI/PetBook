@@ -277,11 +277,12 @@ border: 0px;
 
 
 footer {
-  width: 80%;
+  width: 100%;
   margin-top: 45px;
   padding-top: 5px;
   padding-bottom: 50px;
   border-top: 1px solid #eaeaea;
+  border-top-width: 100%;
   color: #777;
 }
 
@@ -505,19 +506,6 @@ aside {
     font-size: 1.1em;
   }
 
-  [id^=like] {
-margin-top: 5%;
-    width: 50%;
-    margin-left: 60px;
-    padding: 5%;
-    font-size: 1.2em;
-    background-image: url('http://www.clker.com/cliparts/R/h/P/e/p/U/pink-heart-hi.png');
-    background-size: 20px 20px;
-    background-position: 5px;
-    background-repeat: no-repeat;
-    background-position: left;
-    background-color: transparent;
-  }
 div.field {
   width:100%;
 
@@ -527,6 +515,19 @@ span.content {
   font-size: 1.3em;
 }
 
+}
+
+#likebtn {
+margin-left: 10%;
+font-size: 1.2em;
+  width: 140px;;
+  height: 40px;
+  border-radius: 50px;
+  background-image: url('http://www.clker.com/cliparts/R/h/P/e/p/U/pink-heart-hi.png');
+  background-size: 25px 25px;
+  background-position: 10px;
+  background-repeat: no-repeat;
+  background-color: white;
 }
 
 span.picture {
@@ -601,6 +602,9 @@ span.picture {
     background-color: transparent;
   }
 }
+
+//Pet profile page
+
 
 aside {
 width: 100%;

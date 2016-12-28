@@ -1,3 +1,4 @@
+
 <%= stylesheet_link_tag    'application', media: 'all',
                                               'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
@@ -20,11 +21,20 @@
 
   </span>
 
-  <div class="row like">
-    <%= link_to 'Like', like_post_path(post.id), remote: true, id: "like_#{post.id}" %>
+  <!--  <%= link_to 'Like', like_post_path(post.id), remote: true, id: "like_#{post.id}" %> -->
   <!--class: "glyphicon glyphicon-heart-empty"!-->
-
+  <div class="row like">
+    <input align="center" onclick="like()" type="button" id="likebtn" value="Like"></input>
   </div>
+
+<script>
+  function like()
+  {
+    var elem = document.getElementById("likebtn");
+      if (elem.value=="Like") elem.value = "Unlike";
+      else elem.value = "Like";
+  }
+</script>
 
   <div class="commentlist">
   <h4>Comments</h4>
