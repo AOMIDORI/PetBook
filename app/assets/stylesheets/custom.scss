@@ -73,6 +73,23 @@ p {
   line-height: 1.7em;
 }
 
+//LINKS
+a {
+background-color: transparent;
+font-size: 1.2em;
+}
+
+a:hover {
+  background-color: transparent !important;
+  color: black;
+  font-size: 1.2em;
+}
+
+a:visited {
+background-color: transparent !important;
+color:grey !important;
+}
+
 /* responsiviness */
 @media only screen and (max-width: 991px) {
     .navbar-right {
@@ -105,6 +122,7 @@ p {
 @media only screen and (min-width: 991px) {
     .navbar-right {
       display:block;
+      font-size: 0.8em;
     }
     .navbar-narrow{
     display: none;
@@ -391,16 +409,14 @@ $gray-medium-light: #eaeaea;
 }
 
 #userpic > img {
-  width: 70%;
-  padding-bottom: 10%;
+  width: 80%;
+  margin-bottom: 10%;
 }
 
 #usermail {
   padding: 0%;
   font-size: 1.5em;
 }
-
-/* Pet list */
 
 
 
@@ -527,11 +543,17 @@ span.picture {
 }
 
 
+/* ----  following/followers page --------- */
+#following_page_stats {
+  margin-top: 5%;
+}
+
+
 /* ----  pets ----------------------------- */
 
+  /* Pet list */
 .pets {
   list-style: none;
-  padding: 0;
   li {
     padding: 10px 0;
     border-top: 1px solid #e8e8e8;
@@ -548,6 +570,7 @@ span.picture {
       padding: 5px 0;
     }
   }
+
   .timestamp {
     color: $gray-light;
     display: block;
@@ -560,8 +583,6 @@ span.picture {
   }
 }
 
-
-
 #pet_list {
   width: 100%;
   .img-circle{
@@ -572,6 +593,9 @@ span.picture {
   .petinfo {
     font-size: 1.3em;
     font-weight: bold;
+  }
+  h2{
+    margin-top:10%;
   }
   a:hover {
     background-color: transparent;
@@ -615,10 +639,10 @@ span.picture {
 
 .stats {
   overflow: auto;
-align-content: center;
+  align-content: center;
   margin-top: 0;
   padding: 0;
-  font-size: 1.1em;
+  font-size: 0.9em;
 
   a {
     float:none;
