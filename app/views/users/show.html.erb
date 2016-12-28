@@ -1,33 +1,40 @@
+<!--USER PROFILE PAGE-->
+
 <% provide(:title, @user.name) %>
 <%= render 'layouts/header' %>
 
-<%= link_to 'Edit', edit_user_path(@user) %> 
+<!--user info!-->
 <div class="row">
   <aside class="col-md-4">
-    <section class="user_info">
-      <%= gravatar_for @user %> 
-      <h1>
-        <%= @user.name %>
-      </h1>
-        <%= @user.email %>
+      <h1><%= @user.name %></h1>
+    <section id="userinfopanel", class="user_info">
+      <div align="center", id="userpic"><%= gravatar_for @user %></div>
+      <div align="center", id="usermail"><%= @user.email %></div>
+      <div align="center", id="userstats"><%= render 'shared/stats' %></div>
     </section>
 
-    <section>
-      <%= render 'shared/stats' %>
-    </section>
-    <section>
-      <h4> Pet lists </h4>
-      <ol class="pets">
-        <%= render @pets %>
-      </ol>
-      <%= link_to 'Add new pet', addpet_path %>
-    </section>
+<!--edit user info!-->
+    <div align="center", id="edit_user_btn", ><%= link_to 'Edit user profile', edit_user_path(@user), class: "btn" %></div>
 
-  </aside>
+<!--PETS!-->
+<!--pet list info!-->
+  <section>
+    <div id="pet_list">
+    <h2> Pets </h2>
+    <ol class="pets">
+      <%= render @pets %>
+    </ol>
+  </div>
+  </section>
+  <div align="center", id="addpet_btn"><%= link_to 'Add new pet', addpet_path, class:"btn" %></div>
+
+    </aside>
+
+<!--POSTS!-->
   <div class="col-md-8">
     <%= render 'follow_form' if logged_in? %>
     <% if @user.posts.any? %>
-      <h3>Posts (<%= @user.posts.count %>)</h3>
+      <h3 align="center">Posts (<%= @user.posts.count %>)</h3>
       <ol class="posts">
         <%= render @posts %>
       </ol>
@@ -35,3 +42,5 @@
     <% end %>
   </div>
 </div>
+
+<%= render 'layouts/footer' %>

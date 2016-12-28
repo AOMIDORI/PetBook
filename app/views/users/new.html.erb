@@ -1,21 +1,23 @@
+<!--SIGN UP PAGE-->
 <% provide(:title, 'Sign up') %>
 <% provide(:button_text, 'Create my account') %>
 <%= render 'layouts/header' %>
 
-<h1>Sign up</h1>
+<h1>Sign up PetBook</h1>
 <div class="row">
   <div class="col-md-6 col-md-offset-3">
 
+<!--picture-->
     <div align="center" id="signuppic">
+      <h4>Join pets and pet lovers around the world for free!</h4>
             <img src="http://blogs-images.forbes.com/kristintablang/files/2016/02/Uber-Puppies.jpg" />
    </div>
 
+<!--login form-->
 	  <%= render 'form', user: @user %>
-
-
   </div>
 </div>
 
 <div class="petbook_link">
-<%= link_to 'Back', welcome_index_path %>
+<%= link_to 'Back', welcome_index_path, class:"btn" %>
 </div>

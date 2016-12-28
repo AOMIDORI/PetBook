@@ -1,14 +1,15 @@
-
+<!--PET PROFILE PAGE!-->
 <% provide(:title, @pet.name) %>
 <%= render 'layouts/header' %>
 
 <div class="text-center" style="margin-bottom: 10px">
   <% if @pet.avatar? %>
-    <%= link_to image_tag(@pet.avatar.url, size: "120", class: "img-circle"), @pet %>
-    <h4><strong><%= @pet.name %></strong></h4>
+    <div id="petlistpic"<%= link_to image_tag(@pet.avatar.url, size: "120", class: "img-circle"), @pet %></div>
+    <div class="petnamelabel" <h3><strong><%= @pet.name %></strong></h3></div>
   <% end %>
 </div>
 
+<!--pet info!-->
 <div class="center profilecard">
 
   <strong>Name: </strong>

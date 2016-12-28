@@ -1,12 +1,17 @@
+<!--LOGIN PAGE-->
+
 <% provide(:title, "Log in") %>
 <%= render 'layouts/header' %>
 
 <h1>Welcome back!</h1>
 
+<!--picture-->
 <div align="center" id="loginpic">
-        <img src="http://static.boredpanda.com/blog/wp-content/uploads/2014/06/cute-bunnies-tongues-fb.jpg" />
+  <h4>Login page</h4>
+  <img src="http://cdn.paper4pc.com/images/dogs-smiling-funny-animals-wallpaper-1.jpg" />
 </div>
 
+<!--content-->
 <div class="row">
   <div class="col-md-6 col-md-offset-3">
     <%= form_for(:session, url: login_path) do |f| %>
@@ -31,6 +36,7 @@
   </div>
 </div>
 
+<!--back button-->
 <div class="petbook_link">
-<%= link_to 'Back', welcome_index_path %>
+<%= link_to 'Back', welcome_index_path, class:"btn" %>
 </div>
