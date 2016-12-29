@@ -568,6 +568,11 @@ span.content {
   font-size: 1.3em;
 }
 
+//user name
+.user a {
+  font-size: 1.4em;
+}
+
 }
 
 #post_picture {
@@ -766,14 +771,20 @@ span.picture {
   background-color: black !important;
   border-color: black !important;
   color: white !important;
+  font-size: 17px !important;
 }
 
 .btn:visited {
   color: white !important;
+  background-color: black !important;
+  font-size: 17px !important;
 }
 
 .btn:hover {
-  color: #E8D6D3 !important;
+  color: grey !important;
+  background-color: black !important;
+  font-size: 17px !important;
+
 }
 
 
