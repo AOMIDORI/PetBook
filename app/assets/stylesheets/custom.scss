@@ -155,6 +155,18 @@ color:grey !important;
       background-size: 35px 35px;
       background-position: 50px;
     }
+
+#petprofilepic  {
+  img{
+  position:relative;
+  width: 400px !important;
+  height: 400px !important;
+  margin: 0;
+  margin-left:20%;
+}
+
+}
+
 }
 
 
@@ -752,6 +764,8 @@ color: black;
   width: 40px;
   height:40px;
 }
+
+#petprofileside >img {}
 
 #petprofilecontainer {
 display: inline;
