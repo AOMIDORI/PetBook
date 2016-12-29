@@ -51,9 +51,12 @@
             <div class="col-md-3">
               <div class="grid_picture">
               <%= image_tag("explore/doge.jpeg", size: "200x200")%>
+
                 <p class="imgDescription">
+                    <% if logged_in? %>
                   <%= gravatar_for current_user, size: 50 %>
                     <%= link_to current_user.name, current_user %>
+                    <% end %>
                     <input value="Like" type="button" align="center" onclick="like(this)" id=likebtn1></input>
               </p>
               </div>
@@ -63,8 +66,10 @@
               <div class="grid_picture">
               <%= image_tag("explore/1.png", size: "200x200")%>
               <p class="imgDescription">
-                <%= gravatar_for current_user, size: 50 %>
-                  <%= link_to current_user.name, current_user %>
+                <% if logged_in? %>
+              <%= gravatar_for current_user, size: 50 %>
+                <%= link_to current_user.name, current_user %>
+                <% end %>
                   <input value="Like" type="button" align="center" onclick="like(this)" id=likebtn1></input>
             </p>
             </div>
@@ -74,8 +79,10 @@
               <div class="grid_picture">
               <%= image_tag("explore/2.png", size: "200x200")%>
               <p class="imgDescription">
-                <%= gravatar_for current_user, size: 50 %>
-                  <%= link_to current_user.name, current_user %>
+                <% if logged_in? %>
+              <%= gravatar_for current_user, size: 50 %>
+                <%= link_to current_user.name, current_user %>
+                <% end %>
                   <input value="Like" type="button" align="center" onclick="like(this)" id=likebtn1></input>
             </p>
             </div>
@@ -85,8 +92,10 @@
               <div class="grid_picture">
               <%= image_tag("explore/3.png", size: "200x200")%>
               <p class="imgDescription">
-                <%= gravatar_for current_user, size: 50 %>
-                  <%= link_to current_user.name, current_user %>
+                <% if logged_in? %>
+              <%= gravatar_for current_user, size: 50 %>
+                <%= link_to current_user.name, current_user %>
+                <% end %>
                   <input value="Like" type="button" align="center" onclick="like(this)" id=likebtn1></input>
             </p>
             </div>
@@ -96,8 +105,10 @@
               <div class="grid_picture">
               <%= image_tag("explore/4.png", size: "200x200")%>
               <p class="imgDescription">
-                <%= gravatar_for current_user, size: 50 %>
-                  <%= link_to current_user.name, current_user %>
+                <% if logged_in? %>
+              <%= gravatar_for current_user, size: 50 %>
+                <%= link_to current_user.name, current_user %>
+                <% end %>
                   <input value="Like" type="button" align="center" onclick="like(this)" id=likebtn1></input>
             </p>
             </div>
@@ -107,8 +118,10 @@
               <div class="grid_picture">
               <%= image_tag("explore/5.png", size: "200x200")%>
               <p class="imgDescription">
-                <%= gravatar_for current_user, size: 50 %>
-                  <%= link_to current_user.name, current_user %>
+                <% if logged_in? %>
+              <%= gravatar_for current_user, size: 50 %>
+                <%= link_to current_user.name, current_user %>
+                <% end %>
                   <input value="Like" type="button" align="center" onclick="like(this)" id=likebtn1></input>
             </p>
             </div>
@@ -118,8 +131,10 @@
               <div class="grid_picture">
               <%= image_tag("explore/6.png", size: "200x200")%>
               <p class="imgDescription">
-                <%= gravatar_for current_user, size: 50 %>
-                  <%= link_to current_user.name, current_user %>
+                <% if logged_in? %>
+              <%= gravatar_for current_user, size: 50 %>
+                <%= link_to current_user.name, current_user %>
+                <% end %>
                   <input value="Like" type="button" align="center" onclick="like(this)" id=likebtn1></input>
             </p>
             </div>
@@ -129,8 +144,10 @@
               <div class="grid_picture">
               <%= image_tag("explore/7.png", size: "200x200")%>
               <p class="imgDescription">
-                <%= gravatar_for current_user, size: 50 %>
-                  <%= link_to current_user.name, current_user %>
+                <% if logged_in? %>
+              <%= gravatar_for current_user, size: 50 %>
+                <%= link_to current_user.name, current_user %>
+                <% end %>
                   <input value="Like" type="button" align="center" onclick="like(this)" id=likebtn1></input>
             </p>
             </div>
@@ -140,8 +157,10 @@
               <div class="grid_picture">
               <%= image_tag("explore/8.png", size: "200x200")%>
               <p class="imgDescription">
-                <%= gravatar_for current_user, size: 50 %>
-                  <%= link_to current_user.name, current_user %>
+                <% if logged_in? %>
+              <%= gravatar_for current_user, size: 50 %>
+                <%= link_to current_user.name, current_user %>
+                <% end %>
                   <input value="Like" type="button" align="center" onclick="like(this)" id=likebtn1></input>
             </p>
             </div>
@@ -151,8 +170,10 @@
               <div class="grid_picture">
               <%= image_tag("explore/9.png", size: "200x200")%>
               <p class="imgDescription">
-                <%= gravatar_for current_user, size: 50 %>
-                  <%= link_to current_user.name, current_user %>
+                <% if logged_in? %>
+              <%= gravatar_for current_user, size: 50 %>
+                <%= link_to current_user.name, current_user %>
+                <% end %>
                   <input value="Like" type="button" align="center" onclick="like(this)" id=likebtn1></input>
             </p>
             </div>
@@ -162,8 +183,10 @@
               <div class="grid_picture">
               <%= image_tag("explore/10.png", size: "200x200")%>
               <p class="imgDescription">
-                <%= gravatar_for current_user, size: 50 %>
-                  <%= link_to current_user.name, current_user %>
+                <% if logged_in? %>
+              <%= gravatar_for current_user, size: 50 %>
+                <%= link_to current_user.name, current_user %>
+                <% end %>
                   <input value="Like" type="button" align="center" onclick="like(this)" id=likebtn1></input>
             </p>
             </div>
@@ -173,8 +196,10 @@
               <div class="grid_picture">
               <%= image_tag("explore/11.png", size: "200x200")%>
               <p class="imgDescription">
-                <%= gravatar_for current_user, size: 50 %>
-                  <%= link_to current_user.name, current_user %>
+                <% if logged_in? %>
+              <%= gravatar_for current_user, size: 50 %>
+                <%= link_to current_user.name, current_user %>
+                <% end %>
                   <input value="Like" type="button" align="center" onclick="like(this)" id=likebtn1></input>
             </p>
             </div>

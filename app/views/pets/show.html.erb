@@ -2,44 +2,85 @@
 <% provide(:title, @pet.name) %>
 <%= render 'layouts/header' %>
 
-<div class="text-center" style="margin-bottom: 10px">
+<div id="petprofile_container" class="row">
+
+<!--Cover photo-->
+<!--<div align="center" id="petprofilecoverpic" class="category">
+        <img src="http://www.chumspetcare.co.uk/wp-content/uploads/2014/02/rsz_pets2.jpg" />
+</div>-->
+
+
+<!--sidebar-->
+
+<aside align="center" class="col-md-4" id="petprofileside">
+  <section id="petprofilepic">
+<div class="text-center" align="center">
   <% if @pet.avatar? %>
     <div id="petlistpic"<%= link_to image_tag(@pet.avatar.url, size: "120", class: "img-circle"), @pet %></div>
-    <div class="petnamelabel" <h3><strong><%= @pet.name %></strong></h3></div>
   <% end %>
 </div>
+  </section>
+
+<!--owner photo and link-->
+  <section>
+<h3>Owner</h3>
+<%= gravatar_for @pet.user, size: 50 %>
+  <%= link_to @pet.user.name, current_user %>
+  <br>
+</section>
+
+<!--edit button if own pet-->
+  <% if current_user==@pet.user %>
+      <div id="edit_pet_btn", ><%= link_to 'Edit Pet Profile', edit_pet_path(@pet), class: "btn" %></div>
+    <% end %>
+
+
+</aside>
+
 
 <!--pet info!-->
-<div class="center profilecard">
+<div class="col-md-8">
 
+<div align="center" id=petinfocard class="center profilecard">
+
+<div id="petnamelabel" align="center" <h3><strong><%= @pet.name %></strong></h3></div>
+
+<h3>Basic Info</h3>
   <strong>Name: </strong>
   <%= @pet.name %>
   <br>
-
-  <strong>Owner: </strong>
-  <%= @pet.user.name %>
-  <br>
-
   <strong>Birthday: </strong>
   <%= @pet.birthday %>
   <br>
-
-  <strong>Gender: </strong>
-  <%= @pet.gender %>
   <br>
 
-  <strong>Animal Type: </strong>
-  <%= @pet.animal_type %>
+<!--ANIMAL INFO: gender, type, breed-->
+<h3>Animal Info</h3>
+<% if @pet.gender == "m" %>
+ <div id="genderpic" class="category">
+         <img src="http://www.iconsdb.com/icons/preview/black/male-xxl.png" />
+</div>
+<strong>Gender: </strong><span>Male</span>
+<% else %>
 
-  <strong>Breed: </strong>
-  <%= @pet.breed %>
-  <br>
+<div id="genderpic" class="category">
+        <img src="http://www.free-icons-download.net/images/female-icon-45970.png"/>
+</div>
+<strong>Gender: </strong><span>Female</span>
+<%end%>
+<br>
+<strong>Animal Type: </strong>
+<%= @pet.animal_type %>
+<br>
+<strong>Breed: </strong>
+<%= @pet.breed %>
+<br>
+<br>
 
-  <strong>Bio: </strong>
+<h3>Bio</h3>
   <%= @pet.bio %>
+  </div>
 
 </div>
-
-<%= link_to 'Edit', edit_pet_path(@pet) %>
-
+</div>
 <%= render 'layouts/footer' %>
