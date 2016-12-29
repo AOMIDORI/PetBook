@@ -860,3 +860,29 @@ span.picture {
   visibility: visible;
   opacity: 1;
 }
+
+
+/* CONTACT PAGE */
+#contactpic > img{
+    width: 50%;
+    margin-bottom: 3%;
+    margin-top: 3%;
+    border-radius: 50px;
+    box-shadow: 2px 10px 43px 0px rgba(0,0,0,0.75);
+}
+
+/* NEWS PAGE */
+#newspic > img{
+    width: 50%;
+    margin-bottom: 3%;
+    margin-top: 3%;
+    box-shadow: 2px 10px 43px 0px rgba(0,0,0,0.75);
+    border-radius: 50px;
+}
+
+#notification_table {
+  border-top: 1px;
+  border-bottom: 1px;
+  border-color: grey;
+  max-height: 2000px;
+}
