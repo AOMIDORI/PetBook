@@ -398,6 +398,20 @@ $gray-medium-light: #eaeaea;
   }
 }
 
+/* ----  home page ------------------- */
+#home_user_info {
+  img {
+    margin-top: 5px;;
+    width: 120px;
+  }
+  #Posts {
+    display: none;
+  }
+  h1 {
+    display: none;
+  }
+}
+
 /* ----  user profile page ------------------- */
 
 #userinfopanel {
@@ -509,9 +523,9 @@ aside {
     font-size: 1.1em;
   }
 
+//comment field
 div.field {
   width:100%;
-
 }
 
 span.content {
