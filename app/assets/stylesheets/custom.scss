@@ -90,6 +90,8 @@ background-color: transparent !important;
 color:grey !important;
 }
 
+
+
 /* responsiviness */
 @media only screen and (max-width: 992px) {
     .navbar-right {
@@ -763,4 +765,52 @@ span.picture {
 /*-----follow--------------------------*/
 #followbtn {
 
+}
+
+/*-----explore page--------------------------*/
+.grid_picture {
+  position: relative;
+  width: 200px;
+  height: 200px;
+}
+
+.col-md-3 {
+  margin: 5px;
+}
+
+.imgDescription {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(255, 255, 255, 0.72);
+  color: black;
+  visibility: hidden;
+  opacity: 0;
+  width: 200px;
+  height: 200px;
+  margin-left:20px;
+  margin-top:20px;
+  padding-top:40px;
+
+  #likebtn1 {
+    margin-left: 10px;
+    margin-top: 20px;
+  }
+
+  /*remove comment if you want a gradual transition between states*/
+  -webkit-transition: visibility opacity 0.2s;
+}
+
+.explorename {
+  font-size: 1.3em;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+.grid_picture:hover .imgDescription {
+  visibility: visible;
+  opacity: 1;
 }

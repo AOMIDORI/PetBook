@@ -1,4 +1,32 @@
 <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link rel="icon" href="../../favicon.ico">
+
+  <title>Off Canvas Template for Bootstrap</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="../../dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+  <link href="../../assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="offcanvas.css" rel="stylesheet">
+
+  <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+  <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+  <script src="../../assets/js/ie-emulation-modes-warning.js"></script>
+
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
 
     <div class="explore_header">
     <%= render 'layouts/header' %>
@@ -11,87 +39,144 @@
 
       <div class="row row-offcanvas row-offcanvas-right">
 
-        <div class="col-xs-12 col-sm-10">
-
-          <div class="jumbotron">
+        <div align="center" class="col-xs-12 col-sm-10">
 
             <h1>EXPLORE</h1>
             <div id="explore_subtitle">
-            <p>Explore other pets around the world!</p>
-            </div>
-          </div>
+            <h4>Explore other pets around the world!</h4>
+        </div>
 
 
           <div class="row">
             <div class="col-md-3">
               <div class="grid_picture">
               <%= image_tag("explore/doge.jpeg", size: "200x200")%>
-            </div>
+                <p class="imgDescription">
+                  <%= gravatar_for current_user, size: 50 %>
+                    <%= link_to current_user.name, current_user %>
+                    <input value="Like" type="button" align="center" onclick="like(this)" id=likebtn1></input>
+              </p>
+              </div>
             </div><!--/.col-xs-6.col-lg-4-->
 
             <div class="col-md-3">
               <div class="grid_picture">
               <%= image_tag("explore/1.png", size: "200x200")%>
+              <p class="imgDescription">
+                <%= gravatar_for current_user, size: 50 %>
+                  <%= link_to current_user.name, current_user %>
+                  <input value="Like" type="button" align="center" onclick="like(this)" id=likebtn1></input>
+            </p>
             </div>
             </div><!--/.col-xs-6.col-lg-4-->
 
             <div class="col-md-3">
               <div class="grid_picture">
               <%= image_tag("explore/2.png", size: "200x200")%>
+              <p class="imgDescription">
+                <%= gravatar_for current_user, size: 50 %>
+                  <%= link_to current_user.name, current_user %>
+                  <input value="Like" type="button" align="center" onclick="like(this)" id=likebtn1></input>
+            </p>
             </div>
               </div><!--/.col-xs-6.col-lg-4-->
 
             <div class="col-md-3">
               <div class="grid_picture">
               <%= image_tag("explore/3.png", size: "200x200")%>
+              <p class="imgDescription">
+                <%= gravatar_for current_user, size: 50 %>
+                  <%= link_to current_user.name, current_user %>
+                  <input value="Like" type="button" align="center" onclick="like(this)" id=likebtn1></input>
+            </p>
             </div>
               </div><!--/.col-xs-6.col-lg-4-->
 
             <div class="col-md-3">
               <div class="grid_picture">
               <%= image_tag("explore/4.png", size: "200x200")%>
+              <p class="imgDescription">
+                <%= gravatar_for current_user, size: 50 %>
+                  <%= link_to current_user.name, current_user %>
+                  <input value="Like" type="button" align="center" onclick="like(this)" id=likebtn1></input>
+            </p>
             </div>
             </div><!--/.col-xs-6.col-lg-4-->
 
             <div class="col-md-3">
               <div class="grid_picture">
               <%= image_tag("explore/5.png", size: "200x200")%>
+              <p class="imgDescription">
+                <%= gravatar_for current_user, size: 50 %>
+                  <%= link_to current_user.name, current_user %>
+                  <input value="Like" type="button" align="center" onclick="like(this)" id=likebtn1></input>
+            </p>
             </div>
             </div><!--/.col-xs-6.col-lg-4-->
 
             <div class="col-md-3">
               <div class="grid_picture">
               <%= image_tag("explore/6.png", size: "200x200")%>
+              <p class="imgDescription">
+                <%= gravatar_for current_user, size: 50 %>
+                  <%= link_to current_user.name, current_user %>
+                  <input value="Like" type="button" align="center" onclick="like(this)" id=likebtn1></input>
+            </p>
             </div>
             </div><!--/.col-xs-6.col-lg-4-->
 
             <div class="col-md-3">
               <div class="grid_picture">
               <%= image_tag("explore/7.png", size: "200x200")%>
+              <p class="imgDescription">
+                <%= gravatar_for current_user, size: 50 %>
+                  <%= link_to current_user.name, current_user %>
+                  <input value="Like" type="button" align="center" onclick="like(this)" id=likebtn1></input>
+            </p>
             </div>
             </div><!--/.col-xs-6.col-lg-4-->
 
             <div class="col-md-3">
               <div class="grid_picture">
               <%= image_tag("explore/8.png", size: "200x200")%>
+              <p class="imgDescription">
+                <%= gravatar_for current_user, size: 50 %>
+                  <%= link_to current_user.name, current_user %>
+                  <input value="Like" type="button" align="center" onclick="like(this)" id=likebtn1></input>
+            </p>
             </div>
             </div><!--/.col-xs-6.col-lg-4-->
 
             <div class="col-md-3">
               <div class="grid_picture">
               <%= image_tag("explore/9.png", size: "200x200")%>
+              <p class="imgDescription">
+                <%= gravatar_for current_user, size: 50 %>
+                  <%= link_to current_user.name, current_user %>
+                  <input value="Like" type="button" align="center" onclick="like(this)" id=likebtn1></input>
+            </p>
             </div>
             </div><!--/.col-xs-6.col-lg-4-->
 
             <div class="col-md-3">
               <div class="grid_picture">
               <%= image_tag("explore/10.png", size: "200x200")%>
+              <p class="imgDescription">
+                <%= gravatar_for current_user, size: 50 %>
+                  <%= link_to current_user.name, current_user %>
+                  <input value="Like" type="button" align="center" onclick="like(this)" id=likebtn1></input>
+            </p>
             </div>
             </div><!--/.col-xs-6.col-lg-4-->
 
             <div class="col-md-3">
               <div class="grid_picture">
               <%= image_tag("explore/11.png", size: "200x200")%>
+              <p class="imgDescription">
+                <%= gravatar_for current_user, size: 50 %>
+                  <%= link_to current_user.name, current_user %>
+                  <input value="Like" type="button" align="center" onclick="like(this)" id=likebtn1></input>
+            </p>
             </div>
             </div><!--/.col-xs-6.col-lg-4-->
 
@@ -102,11 +187,8 @@
 
       </div><!--/row-->
 
-      <hr>
 
-      <footer>
           <%= render 'layouts/footer' %>
-      </footer>
 
     </div><!--/.container-->
 
@@ -120,5 +202,13 @@
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
     <script src="offcanvas.js"></script>
-  </body>
 
+    <script>
+      function like(elem)
+      {
+          if (elem.value=="Like") elem.value = "Unlike";
+          else elem.value = "Like";
+      }
+    </script>
+
+  </body>
