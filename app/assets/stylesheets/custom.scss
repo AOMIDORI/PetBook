@@ -47,16 +47,23 @@ textarea {
 }
 
 /* typography */
+@font-face {
+    font-family: "Petbook"; /*a name to be used later*/
+    src: url(/assets/adventpro-regular.ttf); /*URL to font*/
+}
+
 
 h1, h2, h3, h4, h5, h6 {
   line-height: 1;
 }
+
 
 h1 {
   font-size: 3em;
   letter-spacing: -2px;
   margin-bottom: 30px;
   text-align: center;
+  font-family: 'Petbook';
 }
 
 h2 {
@@ -329,7 +336,6 @@ footer a {
 footer a:hover {
   color: white;
   text-decoration: none;
-  padding: 15%;
 }
 
 footer small {
@@ -339,6 +345,7 @@ footer small {
 footer ul {
   float: right;
   list-style: none;
+  margin-top: 5px;
 }
 
 footer ul li {
@@ -709,6 +716,58 @@ span.picture {
   }
 }
 
+#petlistpic{
+padding: 20px;
+img{
+  float:left;
+  width:200px;
+  height: 200px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+}
+
+#petnamelabel {
+  font-size: 3em;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+#petinfocard {
+width: 100%;
+text-align: center;
+padding:20px;
+font-size: 1.3em;
+color: black;
+}
+
+#edit_pet_btn {
+  margin-top: 40px;
+}
+
+#genderpic > img {
+  margin-left: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 40px;
+  height:40px;
+}
+
+#petprofilecontainer {
+display: inline;
+}
+
+/*#petprofilecoverpic {
+  background-color: white;
+  width: 100%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  img {
+    width:90%
+  }
+}
+*/
+
 
 /* --------sidebar------------------------- */
 
@@ -798,7 +857,7 @@ span.picture {
   padding-bottom: 15px;
   background: #ffffff;
   font-size: 14px;
-  font-family: sans-serif;
+  //font-family: sans-serif;
   color: grey;
   width: 400px;
   margin:0 auto;
