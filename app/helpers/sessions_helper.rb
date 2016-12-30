@@ -38,6 +38,9 @@ module SessionsHelper
   def rec4
     @rec4 = User.find(104)
   end
+  def rec5
+    @rec5 = User.find(105)
+  end
 
 
 
