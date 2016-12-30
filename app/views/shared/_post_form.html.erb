@@ -6,7 +6,7 @@
 <!--post text field-->
 
   <div class="field">
-    <%= f.text_area :content, placeholder: "Share your pet story...", class:"post-form"%>
+    <%= f.text_area :content, placeholder: "Share your pet story..." %>
   </div>
 
 <div>
@@ -24,11 +24,11 @@
 
 
 
-</div
+</div>
 
 <% end %>
 
-<!--only pictures under 5MB are allowed-->
+<!-- only pictures under 5MB are allowed-->
 <script type="text/javascript">
   $('#post_picture').bind('change', function() {
     var size_in_megabytes = this.files[0].size/1024/1024;

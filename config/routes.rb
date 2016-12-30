@@ -1,7 +1,6 @@
 Rails.application.routes.draw do
 
-  resources :comments
-  resources :pets
+
   #get 'sessions/create'
   get 'welcome/index'
 
@@ -32,15 +31,11 @@ Rails.application.routes.draw do
 
   resources :posts do
     resources :comments
-    member do
-      get 'like'
-    end
-
   end
   resources :relationships, only: [:create, :destroy]
 
   
   #resources :account_activations, only: [:edit]
-  #resources :sessions
+  resources :sessions
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

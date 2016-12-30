@@ -1,5 +1,5 @@
 class CommentsController < ApplicationController
-
+ 
 	before_action :find_post
 
 	def create
@@ -9,7 +9,7 @@ class CommentsController < ApplicationController
 		@comment.save
 
 		if @comment.save
-			redirect_back_or(home_url)
+			redirect_to :back
 		end
 	end
 
@@ -17,7 +17,7 @@ class CommentsController < ApplicationController
 		@comment = @post.comments.find(params[:id])
 		@comment.destroy
 		flash[:success] = "Comment deleted!"
-		redirect_back_or(home_url)
+		redirect_to :back
 	end
 
 

@@ -1,5 +1,6 @@
 class PostsController < ApplicationController
-  
+   skip_before_filter :verify_authenticity_token
+     protect_from_forgery with: :null_session
   before_action :logged_in_user, only: [:create, :destroy, :like]
   before_action :correct_user, only: :destroy
 
