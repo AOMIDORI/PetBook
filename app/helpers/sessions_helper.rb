@@ -26,6 +26,20 @@ module SessionsHelper
     	end
   	end
 
+   def rec1
+    @rec1 = User.find(101)
+  end
+  def rec2
+    @rec2 = User.find(102)
+  end
+  def rec3
+    @rec3 = User.find(103)
+  end
+  def rec4
+    @rec4 = User.find(104)
+  end
+
+
 
     # Returns true if the user is logged in, false otherwise.
     def logged_in?
