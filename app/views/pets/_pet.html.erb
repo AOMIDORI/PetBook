@@ -2,5 +2,5 @@
   <% if pet.avatar? %>
     <%= link_to image_tag(pet.avatar.url, size: "25", class:"img-circle"), pet %>
   <% end %>
-  <span class="petinfo"><%= pet.name %></span>
+  <span class="petinfo"><%= link_to pet.name, pet %></span> 
 </li>
