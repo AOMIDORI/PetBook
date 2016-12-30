@@ -4,27 +4,42 @@ module SessionsHelper
 	end
 
 	# Remembers a user in a persistent session.
-    def remember(user)
-        user.remember
-        cookies.permanent.signed[:user_id] = user.id
-        cookies.permanent[:remember_token] = user.remember_token
-    end
+  def remember(user)
+    user.remember
+    cookies.permanent.signed[:user_id] = user.id
+    cookies.permanent[:remember_token] = user.remember_token
+  end
   
   def current_user?(user)
     user == current_user
   end
   
-	def current_user
-       if (user_id = session[:user_id])
-      	    @current_user ||= User.find_by(id: user_id)
-    	elsif (user_id = cookies.signed[:user_id])
-      		user = User.find_by(id: user_id)
-      		if user && user.authenticated?(cookies[:remember_token])
-        		log_in user
-        		@current_user = user
-      		end
-    	end
-  	end
+  def current_user
+   if (user_id = session[:user_id])
+     @current_user ||= User.find_by(id: user_id)
+   elsif (user_id = cookies.signed[:user_id])
+    user = User.find_by(id: user_id)
+    if user && user.authenticated?(cookies[:remember_token])
+      log_in user
+      @current_user = user
+    end
+   end
+
+  end
+
+  def rec1
+    @rec1 = User.find(101)
+  end
+  def rec2
+    @rec2 = User.find(102)
+  end
+  def rec3
+    @rec3 = User.find(103)
+  end
+  def rec4
+    @rec4 = User.find(104)
+  end
+   
 
 
     # Returns true if the user is logged in, false otherwise.
@@ -33,11 +48,11 @@ module SessionsHelper
     end
 
     # Forgets a persistent session.
-  	def forget(user)
+    def forget(user)
     	user.forget
     	cookies.delete(:user_id)
     	cookies.delete(:remember_token)
-	end
+    end
 
     def log_out
     	forget(current_user)
@@ -46,10 +61,10 @@ module SessionsHelper
     end
 
     # Redirects to stored location (or to the default).
-  def redirect_back_or(default)
-    redirect_to(session[:forwarding_url] || default)
-    session.delete(:forwarding_url)
-  end
+    def redirect_back_or(default)
+      redirect_to(session[:forwarding_url] || default)
+      session.delete(:forwarding_url)
+    end
 
   # Stores the URL trying to be accessed.
   def store_location
