@@ -9,7 +9,7 @@ class CommentsController < ApplicationController
 		@comment.save
 
 		if @comment.save
-			redirect_to :back
+			redirect_back_or(home_url)
 		end
 	end
 
@@ -17,7 +17,7 @@ class CommentsController < ApplicationController
 		@comment = @post.comments.find(params[:id])
 		@comment.destroy
 		flash[:success] = "Comment deleted!"
-		redirect_to :back
+		redirect_back_or(home_url)
 	end
 
 
